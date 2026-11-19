@@ -1,0 +1,38 @@
+name = "job-board"
+main = "src/worker/index.ts"
+compatibility_date = "2026-11-12"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "job-board-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+[[kv_namespaces]]
+binding = "SCREENSHOTS"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
+
+[[queues.producers]]
+binding = "EXTRACTION_QUEUE"
+queue = "job-board-extraction"
+
+[[queues.consumers]]
+queue = "job-board-extraction"
+max_batch_size = 1
+max_retries = 2
+
+[[queues.producers]]
+binding = "DISCOVERY_QUEUE"
+queue = "job-board-discovery"
+
+[[queues.consumers]]
+queue = "job-board-discovery"
+max_batch_size = 1
+max_retries = 2
+
+[triggers]
+crons = ["0 0 * * *"]
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+not_found_handling = "single-page-application"

@@ -1,0 +1,2 @@
+SESSION_SECRET=replace-with-a-long-random-session-secret
+AI_SECRET=replace-with-a-long-random-api-key-secret
