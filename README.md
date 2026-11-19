@@ -4,7 +4,9 @@
 
 > 这是公开作品展示快照：已移除真实访问码、Cloudflare D1/KV ID 和私人使用数据。部署前请使用自己的 Cloudflare 资源替换 `wrangler.toml` 中的占位 ID。
 
-个人作品集：https://personal-portfolio-ake.pages.dev
+个人主页：https://personal-portfolio-ake.pages.dev  
+项目案例：https://personal-portfolio-ake.pages.dev/portfolio/job-board.html  
+原产品入口：https://job-board-pages-5qp.pages.dev
 
 ## 本地运行
 
